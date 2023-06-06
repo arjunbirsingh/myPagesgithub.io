@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Successful</title>
+    <style>
+      body {
+        display: flex;
+      }
+      div {
+        background-color: white;
+        width: 50%;
+        height: fit-content;
+        margin: auto auto;
+        padding: 40px;
+        min-width: 270px;
+        border: 1px solid white;
+        border-radius: 20px;
+        max-width: 350px;
+      }
+      button{
+        width: 100%;
+        padding: 10px;
+        margin-top: 30px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color:  hsl(234, 29%, 20%);
+        color: white;
+        font-weight: 500;
+      }
+      button:hover{
+        cursor: pointer;
+        background: linear-gradient(to right, rgb(222, 122, 115), red);
+      }
+      #tickIcon{
+        display: inline;
+        padding: 0;
+      }
+      #tickIcon svg{
+        margin-left: 0;
+        width: 50px;
+        height: 100%;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="centeredDiv">
+        <div id="tickIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+        </div>
+      <h1>Thanks for subscribing!</h1>
+      <p>
+        A conformation email has been sent to
+        <b><span id="emailInsert"></span></b>
+        . Please open it and click the button inside to confirm your
+        subscription
+      </p>
+      <button>Dismiss message</button>
+    </div>
+    <script>
+        let body=document.body;
+        let button=body.getElementsByTagName("button");
+        button[0].addEventListener("click",function(){
+            window.location.href="index.html";
+        });
+    </script>
+  </body>
+</html>

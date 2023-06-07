@@ -18,6 +18,8 @@ button[0].addEventListener("click", function () {
   console.log(isemail);
   if (isemail) {
     //go to success page
+    let insert=input[0].value;
+    localStorage.setItem("email",insert);
     window.location.href="success.html";
   } else {
     let error=document.getElementById("error");

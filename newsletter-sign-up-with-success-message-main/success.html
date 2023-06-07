@@ -66,6 +66,8 @@
         button[0].addEventListener("click",function(){
             window.location.href="index.html";
         });
+        let insertEmail = document.querySelector("#emailInsert");
+        insertEmail.innerText=localStorage.getItem("email");
     </script>
   </body>
 </html>

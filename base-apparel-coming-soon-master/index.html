@@ -13,8 +13,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      @media only screen and (max-width:900px){
-        
+      @media only screen and (max-width: 900px) {
       }
     </style>
   </head>
@@ -38,12 +37,36 @@
           </div>
           <div class="emailInput">
             <input type="text" id="email" placeholder="Email Address" />
-              <img id="arrow" src="images/icon-arrow.svg" alt="icon-arrow" />
-              <img src="images/icon-error.svg" alt="icon-arrow" id="hidden">
+            <img id="arrow" src="images/icon-arrow.svg" alt="icon-arrow" />
+            <img src="images/icon-error.svg" alt="icon-arrow" id="hidden" />
           </div>
+          <p id="errMsg">Please provide a valid email</p>
         </div>
       </div>
       <div class="sideImg"></div>
     </div>
+    <script>
+      let body = document.body;
+      let btn = document.getElementById("arrow");
+      btn.addEventListener("click", checkValidEmail);
+      function validateEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+      function checkValidEmail() {
+        let emailEnt = document.getElementById("email").value;
+        // console.log(emailEnt);
+        let res=validateEmail(emailEnt);
+        // console.log(res);
+        if(res===true){
+          document.getElementById("errMsg").style.display="none";
+          document.getElementById("hidden").style.display="none";
+        }
+        else{
+          document.getElementById("errMsg").style.display="block";
+          document.getElementById("hidden").style.display="block";
+        }
+      }
+    </script>
   </body>
 </html>

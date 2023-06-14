@@ -26,7 +26,7 @@ body{
   width: 90%;
   height: 80%;
   min-width: fit-content;
-  min-height: 585px;
+  min-height: 600px;
   box-shadow: 2px 2px rgb(225, 218, 218);
   border-radius: 2px;
 }
@@ -94,6 +94,19 @@ padding: 15px 25px;
   cursor: pointer;
   transform: scale(1.4);
 }
+#errMsg{
+  /* border: 2px solid black; */
+  /* display: none; */
+  width: 422px;
+  margin: auto;
+  text-align: left;
+  color: var(--desatRed);
+  font-size: 0.9rem;
+  color: var(--softRed);
+  /* text-align: center; */
+  padding-top: 5px;
+  display: none;
+} 
 .sideImg{
   width: 40%;
   background: url(images/hero-desktop.jpg);

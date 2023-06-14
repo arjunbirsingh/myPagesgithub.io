@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.container{
+  display: flex;
+  /* background-color: red; */
+  width: 80%;
+  max-width: 1000px;
+  /* min-width: 870px; */
+  height: 70%;
+  min-height: fit-content;
+}
+.main{
+  border: 5px solid greenyellow;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#inside-main-centered{
+  width: 60%;
+  /* background-color: green; */
+  height: 100%;
+}
+#logo{
+  padding: 20px 0px;
+}
+#bigPara{
+  font-size: 50px;
+  letter-spacing: 7px;
+  /* margin-top: 20%; */
+}
+#smallPara{
+  font-size: 16px;
+  /* margin-top: 10%; */
+}
+#input-email{
+  padding: 18px;
+  width: 90%;
+  /* margin-top: 10%; */
+  border-radius: 40px;
+}
+.sideImg{
+  border: 5px solid blue;
+  width: 40%;
+  background: url(images/hero-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

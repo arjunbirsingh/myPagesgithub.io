@@ -6,6 +6,9 @@
   --vDarkBlue: hsl(216, 12%, 8%);
   --orange: hsl(25, 97%, 53%);
 }
+::selection{
+    background-color: transparent;
+}
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +36,7 @@ body {
   width: 450px;
   /* height: 20vw; */
   height: 450px;
+  min-width: 375px;
   padding: 40px;
   border-radius: 50px;
   background-color: var(--darkBlue);

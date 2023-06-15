@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @media screen and (max-width: 450px) {
+        .container{
+          max-width: 95vw;
+          max-height: 70vh;
+          min-height: 370px;
+          padding: 20px;
+          border-radius: 20px;
+          /* background-color: red; */
+        }
+        #howQues{
+          font-size: 30px;
+        } 
+        .rate{
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="star">
+        <img src="images/icon-star.svg" alt="star" />
+      </div>
+      <p id="howQues">How did we do?</p>
+      <p id="para">
+        Please let us know how we did with your support resquests. All feedback
+        is appreciated to help us improve our offering!
+      </p>
+      <form id="numRatings">
+        <span class="rate">1</span>
+        <span class="rate">2</span>
+        <span class="rate">3</span>
+        <span class="rate">4</span>
+        <span class="rate">5</span>
+      </form>
+      <button id="btn">SUBMIT</button>
+    </div>
+    <p id="errorMsg">Please select a rating</p>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -27,6 +27,9 @@ body {
   justify-content: center;
 }
 .container {
+  animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-duration: 0.5s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,7 +60,7 @@ body {
 }
 #para {
   font-size: 14px;
-  line-height: 22   px;
+  line-height: 22 px;
   font-weight: 500;
   color: var(--lightGrey);
 }
@@ -93,55 +96,55 @@ body {
   letter-spacing: 3px;
   background-color: var(--orange);
 }
-#btn:hover{
-    cursor: pointer;
-    background-color: var(--white);
-    color: var(--orange);
+#btn:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--orange);
 }
-#errorMsg{
-    color: red;
-    font-size: 12px;
-    display: none;
-    text-align: center;
-    text-decoration: underline;
+#errorMsg {
+  color: red;
+  font-size: 12px;
+  display: none;
+  text-align: center;
+  text-decoration: underline;
 }
 /* additional for thanks page */
 @keyframes animate-pop {
-    0% {
-      opacity: 0;
-      transform: scale(0.5, 0.5);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
   }
-  
-.containerthnx {
-    animation-name:animate-pop;
-    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
-    animation-duration: 0.5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-     align-items: center;
-    /* width: 20vw; */
-    width: 450px;
-    /* height: 20vw; */
-    height: 450px;
-    padding: 40px;
-    border-radius: 50px;
-    background-color: var(--darkBlue);
-    /* background-color: red; */
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
   }
-.illustration{
-    /* padding: 10px; */
-    /* padding-bottom: 20px; */
-    width: fit-content;
-    /* margin: auto; */
-    margin-top: 0;
 }
-.illustration img{
-    margin: auto;
+
+.containerthnx {
+  animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-duration: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* width: 20vw; */
+  width: 450px;
+  /* height: 20vw; */
+  height: 450px;
+  padding: 40px;
+  border-radius: 50px;
+  background-color: var(--darkBlue);
+  /* background-color: red; */
+}
+.illustration {
+  /* padding: 10px; */
+  /* padding-bottom: 20px; */
+  width: fit-content;
+  /* margin: auto; */
+  margin-top: 0;
+}
+.illustration img {
+  margin: auto;
 }

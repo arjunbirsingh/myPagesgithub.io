@@ -13,41 +13,102 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      @media only screen and (max-width: 900px) {
+      @media screen and (max-width: 1200px) {
+        .container {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        /* body{
+          min-height: 150%;
+        } */
+        .container {
+          min-width: 100%;
+          height: 100%;
+          flex-direction: column-reverse;
+          background: url(images/bg-pattern-desktop.svg);
+          background-size: cover;
+          background-position: center;
+        }
+        #hideWhen{
+          display: none;
+        }
+        .placeForLogo {
+          height: 5%;
+          width: 100%;
+          display: flex;
+          padding-left: 10%;
+          align-items: center;
+          background-color: white;
+        }
+        .leftSide {
+          background: none;
+          width: 100%;
+          height: 55%;
+        }
+        .bigHeading p{
+          text-align: center;
+          font-size: 40px;
+        }
+        .smallHeading p{
+          font-size: 10px;
+          text-align: center;
+        }
+        .input{
+          width: 90vw;
+        }
+        #errorMsg{
+          font-size: 10px;
+        }
+        .rightSide {
+          width: 100%;
+          height: 40%;
+          background: url(images/hero-mobile.jpg);
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="leftSide">
-        <div class="logo">
-          <img src="images/logo.svg" alt="logo" />
+        <div class="lfsLogo">
+          <img src="images/logo.svg" alt="logo" id="hideWhen">
         </div>
-        <div class="textArea">
-          <p class="biggerText">
-            <span id="weare">WE'RE </span><br />
-            <span id="comingsoon">COMING <br />SOON</span>
+        <div class="bigHeading">
+          <p>
+           <span id="weare">WE'RE</span>  <br />
+            COMING <br />
+            SOON
           </p>
-          <div class="smallerText">
-            <p>
-              Hello fellow shoppers. We 're currently building our new <br />
-              fashion store. Add your email below to stay up to date with <br />
-              announcements and our launch deals.
-            </p>
-          </div>
-          <div class="emailInput">
-            <input type="text" id="email" placeholder="Email Address" />
-            <img id="arrow" src="images/icon-arrow.svg" alt="icon-arrow" />
-            <img src="images/icon-error.svg" alt="icon-arrow" id="hidden" />
-          </div>
-          <p id="errMsg">Please provide a valid email</p>
+        </div>
+        <div class="smallHeading">
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up to date with announcements
+            and our launch deals.
+          </p>
+        </div>
+        <div class="input">
+          <input type="text" id="email" placeholder="Email Address" />
+          <img src="images/icon-error.svg" id="icon-error" alt="icon-error" />
+          <img src="images/icon-arrow.svg" alt="icon-arrow" id="icon-arrow" />
+          
+        <p id="errorMsg" style="color: hsl(0, 93%, 68%); display: none">
+          Please provide a valid email
+        </p>
         </div>
       </div>
-      <div class="sideImg"></div>
+      <div class="rightSide"></div>
+      <div class="placeForLogo">
+        <img src="images/logo.svg" alt="logo" width="100px" height="20px" />
+      </div>
     </div>
     <script>
       let body = document.body;
-      let btn = document.getElementById("arrow");
+      let btn = document.getElementById("icon-arrow");
       btn.addEventListener("click", checkValidEmail);
       function validateEmail(email) {
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -56,15 +117,16 @@
       function checkValidEmail() {
         let emailEnt = document.getElementById("email").value;
         // console.log(emailEnt);
-        let res=validateEmail(emailEnt);
+        let res = validateEmail(emailEnt);
         // console.log(res);
-        if(res===true){
-          document.getElementById("errMsg").style.display="none";
-          document.getElementById("hidden").style.display="none";
-        }
-        else{
-          document.getElementById("errMsg").style.display="block";
-          document.getElementById("hidden").style.display="block";
+        if (res === true) {
+          document.getElementById("errorMsg").style.display = "none";
+          document.getElementById("icon-error").style.display = "none";
+          document.getElementById("email").style.borderColor="hsl(0, 36%, 70%)";
+        } else {
+          document.getElementById("errorMsg").style.display = "block";
+          document.getElementById("icon-error").style.display = "block";
+          document.getElementById("email").style.borderColor="red";
         }
       }
     </script>

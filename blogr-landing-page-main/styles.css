@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.container1 {
+  width: 100%;
+  height: 68vh;
+  border-radius: 0 0 0 100px;
+  background: url(images/bg-pattern-intro-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+    to left,
+    hsl(353, 100%, 62%),
+    hsl(13, 100%, 72%)
+  );
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 25%;
+  /* background-color: red; */
+}
+#logo {
+  /* font-family: 'Overpass', sans-serif; */
+  /* font-family: sans-serif; */
+  width: 30%;
+  /* font-weight: 700;
+  color: white;
+  font-size: 40px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu,
+.menu li {
+  display: inline;
+  padding: 10px;
+}
+.menu li p{
+    display: inline;
+}
+.menu li p:hover{
+  cursor: pointer;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+.menu li , .menu button{
+    font-size: 18px;
+    font-family: 'Ubuntu',sans-serif;
+    color: white;
+    font-weight: 700;
+}
+.menu-left{
+    min-width: fit-content;
+}
+.menu-right{
+    width: 30%;
+    min-width: fit-content;
+}
+#login{
+border: none;
+outline: none;
+background-color: transparent;
+padding: 10px;
+cursor: pointer;
+}
+#signup{
+    background-color: white;
+    color:hsl(353, 100%, 62%) ;
+    /* border: 1px solid white; */
+    border: none;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+#signup:hover{
+    color: white;
+    background-color: hsl(13, 100%, 72%);
+}
+.container2 {
+  width: 100%;
+  height: 130vh;
+  background-color: white;
+
+}
+.container3 {
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  border-radius: 0 100px 0 100px;
+}
+.container4 {
+  width: 100%;
+  height: 130vh;
+}
+.container5 {
+  width: 100%;
+  height: 40vh;
+  background-color: hsl(240, 10%, 16%);
+  border-radius: 0 100px 0 0;
+}

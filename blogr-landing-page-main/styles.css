@@ -1,115 +1,301 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+::selection{
+    display: none;
 }
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-width: 100vw;
+::-webkit-scrollbar{
+    display: none;
 }
-.container1 {
-  width: 100%;
-  height: 68vh;
-  border-radius: 0 0 0 100px;
-  background: url(images/bg-pattern-intro-desktop.svg);
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(
-    to left,
-    hsl(353, 100%, 62%),
-    hsl(13, 100%, 72%)
-  );
+:root{
+    --overpass:'Overpass', sans-serif;
+    --ubuntu:'Ubuntu', sans-serif;
+    --vlgred:hsl(13, 100%, 72%);
+    --lgred:hsl(353, 100%, 62%);
+    --vdblue:hsl(208, 49%, 24%);
+    --vdgblue:hsl(237, 17%, 21%);
+    --gblue:hsl(240, 2%, 79%);
+    --vdsatblue:hsl(237, 23%, 32%);
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 25%;
-  /* background-color: red; */
+*{  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
-#logo {
-  /* font-family: 'Overpass', sans-serif; */
-  /* font-family: sans-serif; */
-  width: 30%;
-  /* font-weight: 700;
-  color: white;
-  font-size: 40px; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+html,body{
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
 }
-.menu,
-.menu li {
-  display: inline;
-  padding: 10px;
+.cont1{
+    height: 600px;
+    background: url(images/bg-pattern-intro-desktop.svg),
+    linear-gradient(to right,var(--vlgred),var(--lgred));
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 0 0 110px;
 }
-.menu li p{
-    display: inline;
-}
-.menu li p:hover{
-  cursor: pointer;
-}
-.menu {
+.navbar{
     display: flex;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
-    justify-content: space-between;
-    width: 70%;
+    height: 120px;
+    width: 100%;
+    /* background-color: red; */
 }
-.menu li , .menu button{
-    font-size: 18px;
-    font-family: 'Ubuntu',sans-serif;
-    color: white;
-    font-weight: 700;
-}
-.menu-left{
-    min-width: fit-content;
-}
-.menu-right{
+.navbar .logo{
     width: 30%;
-    min-width: fit-content;
+    text-align: center;
 }
-#login{
-border: none;
-outline: none;
-background-color: transparent;
-padding: 10px;
-cursor: pointer;
+.navbar .navbarGutter{
+    width: 30%;
+    height: 100%;
+    background-color: black;
 }
-#signup{
-    background-color: white;
-    color:hsl(353, 100%, 62%) ;
-    /* border: 1px solid white; */
-    border: none;
+.navbar ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    color: white;
+    font-family: var(--overpass);
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    padding: 15px 30px;
+    padding: 10px;
+}
+.navbar ul li p:hover{
+    text-decoration: underline;
+}
+.navbar button
+{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    width: 100px;
+    font-family: var(--overpass);
+}
+.navbar button p:hover{
+    cursor: pointer;
+}
+.navbar ul li #btn1{
+background-color: transparent;
+border: none;
+color: white;
+}
+.navbar ul li #btn2{
+    color: var(--lgred);
+    border: none;
     border-radius: 30px;
 }
-#signup:hover{
+.navbar ul li #btn2:hover{
     color: white;
-    background-color: hsl(13, 100%, 72%);
+    background-color: var(--vlgred);
 }
-.container2 {
-  width: 100%;
-  height: 130vh;
-  background-color: white;
-
+.cont1>h1{
+    font-family: var(--overpass);
+    font-size: 68px;
+    color: white;
+    letter-spacing: -2px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 100px;
 }
-.container3 {
-  width: 100%;
-  height: 50vh;
-  background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
-  border-radius: 0 100px 0 100px;
+.cont1>p{
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: white;
+    font-family: var(--overpass);
 }
-.container4 {
-  width: 100%;
-  height: 130vh;
+.cont1 .btncont{
+    margin: auto;
+    width: fit-content;
+    margin-top: 50px;
 }
-.container5 {
-  width: 100%;
-  height: 40vh;
-  background-color: hsl(240, 10%, 16%);
-  border-radius: 0 100px 0 0;
+.cont1 .btncont #btn1,.cont1 .btncont #btn2{
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--ubuntu);
+    font-weight: 600;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+.cont1 .btncont #btn1{
+    color: var(--lgred);
+}
+.cont1 .btncont #btn1:hover{
+    color: white;
+    background-color: var(--vlgred);
+}
+.cont1 .btncont #btn2{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+.cont1 .btncont #btn2:hover{
+    color: var(--vlgred);
+    background-color: white;
+}
+.cont2{
+    height: 120vh;
+    overflow: hidden;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont2 h1{
+    width: 55%;
+    display: inline-block;
+    text-align: right;
+    margin-top: 70px;
+    font-size: 40px;
+    font-family: var(--overpass);
+    font-weight: 600;
+    color: var(--vdblue);
+}
+.cont2 .detailcont{
+    width: 55%;
+    text-align: left;
+    margin-top: 100px;
+    line-height: 30px;
+    padding: 0 100px;
+}
+.cont2 .detail{
+    margin-bottom: 50px;
+}
+.cont2 .detail h2{
+    /* color: white; */
+    font-size: 30px;
+    font-family: var(--overpass);
+    color: var(--vdblue);
+}
+.cont2 .detail p{
+    color: var(--vdgblue);
+    margin-top: 24px;
+    font-size: 20px;
+    font-family: var(--overpass);
+}
+#cont2img{
+    /* background-color: red; */
+    width: 45%;
+    height: 100%;
+    float: right;
+}
+#cont2img img{
+    height: 100vh;
+}
+.cont3{
+    position: relative;
+    height: 45vh;
+    background:linear-gradient(to right,var(--vdgblue),var(--vdsatblue));
+    border-radius: 0 120px 0 120px;
+}
+.cont3 .maincontent{
+    overflow-y: hidden;
+    max-height: 100%;
+}
+.cont3 .maintext{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    /* background-color: red; */
+    width: 40%;
+    height: 70%;
+}
+.cont3 .maintext h1{
+    color: white;
+    font-size: 40px;
+    font-family: var(--overpass);
+    font-weight: 600;
+}
+.cont3 .maintext p{
+    color: white;
+    font-family: var(--overpass);
+    font-size: 18px;
+    line-height: 35px;
+    margin-top: 20px;
+}
+.cont3 #circles{
+    margin-left: -5%;
+    margin-top: -30%;
+    overflow-y: hidden;
+}
+.cont3 #posabs{
+    position: absolute;
+    left: 10%;
+    overflow-y: hidden;
+    top: -15%;
+}
+.cont4{
+    margin-top: 10vh;
+    height: 110vh;
+    display: flex;
+    justify-content: space-between;
+}
+.cont4 .sideimg,.cont4 .maintext{
+    width: 50%;
+}
+.cont4 .sideimg{
+    display: flex;
+    align-items: center;
+}
+.cont4 .sideimg img{
+    margin-left: -40%;
+}
+.cont4 .maintext{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    flex-direction: column;
+}
+.cont4 .detail{
+    width: 60%;
+}
+.cont4 .detail h2{
+    font-size: 30px;
+    color: var(--vdblue);
+    font-family: var(--overpass);
+    margin-bottom: 20px;
+}
+.cont4 .detail p{
+    font-size: 18px;
+    font-family: var(--overpass);
+    color: var(--vdgblue);
+}
+.cont5{
+    height: 40vh;
+    background-color: var(--vdgblue);
+    border-radius: 0 120px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cont5 #logo{
+    width: 100px;
+    height: 40px;
+    margin-top: 50px;
+}
+.cont5 ul{
+    color: white;
+    font-family: var(--ubuntu);
+    margin-top: 40px;
+    list-style: none;
+}
+.cont5 ul p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.cont5 ul li{
+    padding: 8px;
+}
+.cont5 ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }

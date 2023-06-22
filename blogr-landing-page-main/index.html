@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -27,46 +26,107 @@
       rel="stylesheet"
     />
     <style>
-      @media screen and (max-width:1100px){
-        .cont3 .maincontent .maintext{
-          width: 40%;
+      /* current breakpoitnt 840px */
+      @media screen and (max-width: 850px) {
+        .cont1 .navbar {
+          padding-left: 1rem;
+          padding-right: 1rem;
         }
-        .cont4 .sideimg img{
-          margin-left: -50%;
-          /* background-color: red; */
+        .cont1 .navbar ul {
+          width: 100%;
+          justify-content: space-between;
         }
-      }
-      @media screen and (max-width:1040px){
-        .cont3 .maincontent .maintext{
-          width: 30%;
+        .cont1 .navbar .mobmenu {
+          display: block;
         }
-        .cont3 .maincontent .maintext h1{
-          font-size: 30px;
-        }
-        .cont4 .maintext{
-          width: 40%;
-        }
-      }
-      @media screen and (max-width:950px){
-        .cont2{
-          justify-content: space-evenly;
-        }
-        .cont2 .allcontent #desk{
+        .cont1 .navbar ul li,
+        .cont1 .navbar .btns {
           display: none;
         }
-        .cont2 .allcontent #mobile{
-          display: block;
+        .cont2 {
+          padding: 0 0;
         }
-        .cont2 .allcontent h1{
-          display: block;
-          text-align: center;
-          /* width: fit-content; */
-          /* background-color: red; */
-          margin: auto;
-        }
-        .cont2 .detailcont{
+        .cont2 .text {
           width: 100%;
           text-align: center;
+        }
+        .cont2 .sideimg {
+          width: 100%;
+          position: static;
+          margin-top: 3rem;
+        }
+        .cont2 #deskill {
+          display: none;
+        }
+        .cont2 #mobill {
+          display: block;
+          margin: auto;
+          max-width: 100%;
+        }
+        .cont3 {
+          margin-top: 3rem;
+        }
+        .cont3 .text {
+          width: 100%;
+          text-align: center;
+          padding: 1rem;
+        }
+        .cont3 .text h2 {
+          font-size: 2.5rem;
+        }
+        .cont3 .text p {
+          line-height: 2rem;
+          font-size: 1rem;
+        }
+        .cont4 {
+          margin-top: 2rem;
+          flex-direction: column;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .cont4 .sideimg {
+          width: 100%;
+          /* height: 359px; */
+        }
+        .cont4 .text .detail {
+          margin-top: 2rem;
+        }
+        .cont4 .sideimg .lapdesk {
+          display: none;
+        }
+        .cont4 .sideimg .lapmob {
+          display: block;
+          width: 100%;
+          height: auto;
+          margin: auto;
+        }
+        .cont4 .text {
+          width: 100%;
+          text-align: center;
+          padding: 1rem;
+        }
+        .cont5 {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .cont5 ul {
+          margin: 2rem 0;
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: 1150px) {
+        .cont1 #deskbg {
+          display: none;
+        }
+        .cont1 #mobbg {
+          display: block;
+          /* border: 4px solid green; */
+          position: absolute;
+          top: -20rem;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: -1;
         }
       }
     </style>
@@ -74,92 +134,113 @@
   <body>
     <div class="cont1">
       <div class="navbar">
-        <div class="logo">
-          <img src="images/logo.svg" alt="logo" />
-        </div>
-        <ul class="menu">
+        <ul>
+          <img src="images/logo.svg" alt="logo" class="logo" />
+          <div class="mobmenu">
+            <img src="images/icon-hamburger.svg" alt="menu" />
+          </div>
           <li>
-            <p>
-              Product <img src="images/icon-arrow-light.svg" alt="arrow-open" />
-            </p>
+            Product
+            <img
+              src="images/icon-arrow-light.svg"
+              alt="arrow"
+              class="down-arrow"
+            />
           </li>
           <li>
-            <p>
-              Company <img src="images/icon-arrow-light.svg" alt="arrow-open" />
-            </p>
+            Company
+            <img
+              src="images/icon-arrow-light.svg"
+              alt="arrow"
+              class="down-arrow"
+            />
           </li>
           <li>
-            <p>
-              Connect <img src="images/icon-arrow-light.svg" alt="arrow-open" />
-            </p>
-          </li>
-          <div class="navbarGutter"></div>
-          <li>
-            <button id="btn1"><p>Login</p></button>
-          </li>
-          <li>
-            <button id="btn2"><p>Sign Up</p></button>
+            Connect
+            <img
+              src="images/icon-arrow-light.svg"
+              alt="arrow"
+              class="down-arrow"
+            />
           </li>
         </ul>
+        <div class="btns">
+          <button class="btn" id="loginbtn"><p>Login</p></button>
+          <button class="btn" id="signupbtnandstforfree"><p>Sign Up</p></button>
+        </div>
       </div>
+      <!-- <picture>
+        <source srcset="images/bg-pattern-intro-desktop.svg" media="(min-width:1000px)">
+        <source srcset="images/bg-pattern-intro-mobile.svg" media="(max-width:1000px)">
+      </picture> -->
+      <img id="deskbg" src="images/bg-pattern-intro-desktop.svg" alt="deskbg" />
+      <img src="images/bg-pattern-intro-mobile.svg" alt="mobbg" id="mobbg" />
       <h1>A modern publishing platform</h1>
-      <p>Grow your audience and build your online brand</p>
-      <div class="btncont">
-        <button id="btn1">Start for Free</button>
-        <button id="btn2">Learn More</button>
+      <p>Grow your audience and bulid your online brand</p>
+      <div class="btns">
+        <button class="btn" id="signupbtnandstforfree">
+          <p>Start for Free</p>
+        </button>
+        <button class="btn" id="lnmore"><p>Learn More</p></button>
       </div>
     </div>
     <div class="cont2">
-      <div class="allcontent">
-        <h1>Designed for the future</h1>
-        <div id="cont2img">
-          <img id="desk" src="images/illustration-editor-desktop.svg" alt="desked" />
-          <img style="display: none;" src="images/illustration-editor-mobile.svg" alt="mobed" id="mobile">
-        </div>
-        <div class="detailcont">
-          <div class="detail">
-            <h2>Introducing an extensible editor</h2>
-            <p>
-              Blogr features an exceedingly intuitive interface which lets you
-              focus on one thing: creating content. The editor supports
-              management of multiple blogs and allows easy manipulation of
-              embeds such as images, videos, and Markdown. Extensibility with
-              plugins and themes provide easy ways to add functionality or
-              change the looks of a blog.
-            </p>
-          </div>
-          <div class="detail">
-            <h2>Robust content management</h2>
-            <p>
-              Flexible content management enables users to easily move through
-              posts. Increase the usability of your blog by adding customized
-              categories, sections, format, or flow. With this functionality,
-              you’re in full control.
-            </p>
-          </div>
-        </div>
+      <h2>Designed for the future</h2>
+      <div class="sideimg">
+        <img
+          src="images/illustration-editor-desktop.svg"
+          alt="deskill"
+          id="deskill"
+        />
+        <img
+          src="images/illustration-editor-mobile.svg"
+          alt="mobill"
+          id="mobill"
+        />
+      </div>
+      <div class="text">
+        <h3>Introducing an extensible editor</h3>
+        <p>
+          Blogr features an exceedingly intuitive interface which lets you focus
+          on one thing: creating content. The editor supports management of
+          multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide
+          easy ways to add functionality or change the looks of a blog.
+        </p>
+        <h3>Robust content management</h3>
+        <p>
+          Flexible content management enables users to easily move through
+          posts. Increase the usability of your blog by adding customized
+          categories, sections, format, or flow. With this functionality, you’re
+          in full control.
+        </p>
       </div>
     </div>
     <div class="cont3">
-      <div class="maincontent">
-        <img id="circles" src="images/bg-pattern-circles.svg" alt="circles" />
-        <div class="maintext">
-          <h1>State of the Art Infrastructure</h1>
-          <p>
-            With reliability and speed in mind, worldwide data centers provide
-            the backbone for ultra-fast connectivity. This ensures your site
-            will load instantly, no matter where your readers are, keeping your
-            site competitive.
-          </p>
-        </div>
+      <div class="text">
+        <h2>State of the Art Infrastructure</h2>
+        <p>
+          With reliability and speed in mind, worldwide data centers provide the
+          backbone for ultra-fast connectivity. This ensures your site will load
+          instantly, no matter where your readers are, keeping your site
+          competitive.
+        </p>
       </div>
-      <img src="images/illustration-phones.svg" alt="phones" id="posabs" />
     </div>
     <div class="cont4">
       <div class="sideimg">
-        <img src="images/illustration-laptop-desktop.svg" alt="laptopcont4">
+        <img
+          src="images/illustration-laptop-desktop.svg"
+          alt="lapdesk"
+          class="lapdesk"
+        />
+        <img
+          src="images/illustration-laptop-mobile.svg"
+          alt="lapmob"
+          class="lapmob"
+        />
       </div>
-      <div class="maintext">
+      <div class="text">
         <div class="detail">
           <h2>Free, open, simple</h2>
           <p>
@@ -182,8 +263,10 @@
       </div>
     </div>
     <div class="cont5">
-      <img src="images/logo.svg" alt="logo" id="logo">
-      <ul id="prduct">
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+      <ul>
         <p>Product</p>
         <li>Overview</li>
         <li>Pricing</li>
@@ -191,14 +274,14 @@
         <li>Features</li>
         <li>Integrations</li>
       </ul>
-      <ul id="company">
+      <ul>
         <p>Company</p>
         <li>About</li>
         <li>Team</li>
-        <li>Blogs</li>
-        <li>Carrer</li>
+        <li>Blog</li>
+        <li>Carrers</li>
       </ul>
-      <ul id="connect">
+      <ul>
         <p>Connect</p>
         <li>Contact</li>
         <li>Newsletter</li>

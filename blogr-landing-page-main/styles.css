@@ -14,288 +14,223 @@
     --gblue:hsl(240, 2%, 79%);
     --vdsatblue:hsl(237, 23%, 32%);
 }
+*::after,*::before{
+    box-sizing: border-box;
+}
 *{  
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
-}
-html,body{
     overflow-x: hidden;
-    min-height: 100vh;
-    min-width: 100vw;
 }
 .cont1{
-    height: 600px;
-    background: url(images/bg-pattern-intro-desktop.svg),
-    linear-gradient(to right,var(--vlgred),var(--lgred));
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 0 0 0 110px;
-}
-.navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    height: 120px;
-    width: 100%;
-    /* background-color: red; */
-}
-.navbar .logo{
-    width: 30%;
-    text-align: center;
-}
-.navbar .navbarGutter{
-    width: 30%;
-    height: 100%;
-    background-color: black;
-}
-.navbar ul{
-    width: 70%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
+    font-family: var(--ubuntu);
+    position: relative;
     color: white;
-    font-family: var(--overpass);
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 10px;
+    background: linear-gradient(to right,var(--vlgred),var(--lgred));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 0 0 8rem;
+    z-index: 1;
+    overflow-y: hidden;
 }
-.navbar ul li p:hover{
-    text-decoration: underline;
+.cont1 #deskbg{
+    position: absolute;
+    top: -30rem;
+    left: 25rem;
+    z-index: -1;
+    transform: scale(2.1);
+    max-width: 100%;
+    height: auto;
 }
-.navbar button
-{
-    font-size: 16px;
-    font-weight: 600;
-    padding: 10px 15px;
-    width: 100px;
-    font-family: var(--overpass);
+.cont1 #mobbg{
+    display: none;
 }
-.navbar button p:hover{
-    cursor: pointer;
+.cont1 .navbar{
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3.5rem;
 }
-.navbar ul li #btn1{
-background-color: transparent;
-border: none;
-color: white;
+.cont1 .navbar .mobmenu{
+    display: none;
 }
-.navbar ul li #btn2{
-    color: var(--lgred);
+.cont1 .navbar ul .logo{
+    margin-right: 3rem;
+}
+.cont1 .navbar ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.cont1 .navbar li{
+    display: inline-block;
+    padding: 20px;
+}
+.cont1 .btn{
+    color: white;
+    margin-left: 1rem;
+    font-size: 1.1rem;
     border: none;
+    padding: 15px 0;
+    width: 9rem;
     border-radius: 30px;
 }
-.navbar ul li #btn2:hover{
-    color: white;
-    background-color: var(--vlgred);
+.cont1 .navbar #loginbtn{
+    padding: 5px;
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+}
+.cont1 #signupbtnandstforfree{
+    color: var(--lgred);
+}
+.cont1 h1,.cont1 p{
+    text-align: center;
 }
 .cont1>h1{
-    font-family: var(--overpass);
-    font-size: 68px;
-    color: white;
-    letter-spacing: -2px;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 100px;
+    font-weight: 500;
+    font-size: 4rem;
+    margin-top: 4rem;
 }
 .cont1>p{
-    font-size: 22px;
-    font-weight: 300;
-    margin-top: 10px;
-    letter-spacing: -1px;
-    text-align: center;
-    color: white;
     font-family: var(--overpass);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
 }
-.cont1 .btncont{
-    margin: auto;
-    width: fit-content;
-    margin-top: 50px;
+.cont1>.btns{
+    margin-top: 3rem;
+    padding-bottom: 11rem;
+    text-align: center;
+    /* border: 2px solid purple; */
 }
-.cont1 .btncont #btn1,.cont1 .btncont #btn2{
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    font-family: var(--ubuntu);
-    font-weight: 600;
-    border-radius: 30px;
-    margin-left: 10px;
+.cont1 .btns p{
+    font-weight: 700;
 }
-.cont1 .btncont #btn1{
-    color: var(--lgred);
-}
-.cont1 .btncont #btn1:hover{
-    color: white;
-    background-color: var(--vlgred);
-}
-.cont1 .btncont #btn2{
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-}
-.cont1 .btncont #btn2:hover{
-    color: var(--vlgred);
-    background-color: white;
+.cont1 #lnmore{
+border: 2px solid white;
+background-color: transparent;
 }
 .cont2{
-    height: 120vh;
-    overflow: hidden;
-    /* text-align: center; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: var(--ubuntu);
+    margin-top: 3rem;
+    position: relative;
+    padding: 4rem 4.5rem;
+    padding-bottom: 13rem;
+    overflow-y: hidden;
+    /* height: 882px; */
+    /* background: url(images/illustration-editor-desktop.svg);
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: 50rem; */
 }
-.cont2 h1{
-    width: 55%;
-    display: inline-block;
-    text-align: right;
-    margin-top: 70px;
-    font-size: 40px;
+.cont2 h2{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--vdsatblue);
+}
+.cont2 .sideimg{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.cont2 #mobill{
+    display: none;
+}
+.cont2 .text{
     font-family: var(--overpass);
-    font-weight: 600;
+    width: 50%;
+    padding: 1rem;
+}
+.cont2 .text h3{
+    font-size: 2.4rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    color: var(--vdsatblue);
+}
+.cont2 .text p{
+    line-height: 1.8rem;
+    font-size: 1.2rem;
     color: var(--vdblue);
-}
-.cont2 .detailcont{
-    width: 55%;
-    text-align: left;
-    margin-top: 100px;
-    line-height: 30px;
-    padding: 0 100px;
-}
-.cont2 .detail{
-    margin-bottom: 50px;
-}
-.cont2 .detail h2{
-    /* color: white; */
-    font-size: 30px;
-    font-family: var(--overpass);
-    color: var(--vdblue);
-}
-.cont2 .detail p{
-    color: var(--vdgblue);
-    margin-top: 24px;
-    font-size: 20px;
-    font-family: var(--overpass);
-}
-#cont2img{
-    /* background-color: red; */
-    width: 45%;
-    height: 100%;
-    float: right;
-}
-#cont2img img{
-    height: 100vh;
 }
 .cont3{
-    position: relative;
-    height: 45vh;
-    background:linear-gradient(to right,var(--vdgblue),var(--vdsatblue));
-    border-radius: 0 120px 0 120px;
-}
-.cont3 .maincontent{
-    overflow-y: hidden;
-    max-height: 100%;
-}
-.cont3 .maintext{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    /* background-color: red; */
-    width: 40%;
-    height: 70%;
-}
-.cont3 .maintext h1{
-    color: white;
-    font-size: 40px;
     font-family: var(--overpass);
-    font-weight: 600;
-}
-.cont3 .maintext p{
-    color: white;
-    font-family: var(--overpass);
-    font-size: 18px;
-    line-height: 35px;
-    margin-top: 20px;
-}
-.cont3 #circles{
-    margin-left: -5%;
-    margin-top: -30%;
-    overflow-y: hidden;
-}
-.cont3 #posabs{
-    position: absolute;
-    left: 10%;
-    overflow-y: hidden;
-    top: -15%;
-}
-.cont4{
-    margin-top: 10vh;
-    height: 110vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    border-radius: 0 8rem 0 8rem;
+    background: linear-gradient(to right,var(--vdgblue),var(--vdsatblue));
 }
-.cont4 .sideimg,.cont4 .maintext{
+.cont3 .text{
     width: 50%;
+    color: white;
+    padding: 3rem;
 }
-.cont4 .sideimg{
+.cont3 h2{
+    font-size: 3rem;
+}
+.cont3 p{
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem; 
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+}
+/* try placing the images inside cont2 and use positionbottom */
+.cont4{
+    font-family: var(--overpass);
     display: flex;
-    align-items: center;
+    padding: 2rem;
+    padding-left: 0;
 }
 .cont4 .sideimg img{
-    margin-left: -40%;
+    margin-left: -20rem;
 }
-.cont4 .maintext{
+.cont4 .sideimg .lapmob{
+    display: none;
+}
+.cont4 .text{
+    padding: 4rem;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 50%;
     flex-direction: column;
+    justify-content: space-evenly;
 }
-.cont4 .detail{
-    width: 60%;
+.cont4 .sideimg, .cont4 .text{
+    width: 50%;
 }
-.cont4 .detail h2{
-    font-size: 30px;
-    color: var(--vdblue);
-    font-family: var(--overpass);
-    margin-bottom: 20px;
+.cont4 .text h2{
+    color: var(--vdsatblue);
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
-.cont4 .detail p{
-    font-size: 18px;
-    font-family: var(--overpass);
-    color: var(--vdgblue);
+.cont4 .text p{
+    color: hsl(207, 13%, 34%);
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
 }
 .cont5{
-    height: 40vh;
-    background-color: var(--vdgblue);
-    border-radius: 0 120px 0 0;
+    font-family: var(--overpass);
+    border-radius: 0 100px 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background: hsl(240, 10%, 16%);
 }
-.cont5 #logo{
-    width: 100px;
-    height: 40px;
-    margin-top: 50px;
+.cont5 .logo{
+    padding-top: 4rem;
 }
 .cont5 ul{
     color: white;
-    font-family: var(--ubuntu);
-    margin-top: 40px;
-    list-style: none;
+    margin: 5rem 0;
 }
 .cont5 ul p{
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 .cont5 ul li{
-    padding: 8px;
-}
-.cont5 ul li:hover{
-    text-decoration: underline;
-    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
 }

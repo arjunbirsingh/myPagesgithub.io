@@ -1,3 +1,4 @@
+
 ::selection{
     display: none;
 }
@@ -23,6 +24,12 @@
     padding: 0;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+}
+button, li:hover{
+    cursor: pointer;
+}
+li:hover{
+    text-decoration: underline;
 }
 .cont1{
     font-family: var(--ubuntu);
@@ -114,6 +121,10 @@
 border: 2px solid white;
 background-color: transparent;
 }
+#lnmore:hover{
+    color: var(--lgred);
+    background-color: white;
+}
 .cont2{
     font-family: var(--ubuntu);
     margin-top: 3rem;
@@ -157,14 +168,29 @@ background-color: transparent;
     font-size: 1.2rem;
     color: var(--vdblue);
 }
+.phones{
+    position: absolute;
+    z-index: 2;
+    margin-top: -10%;
+}
 .cont3{
     font-family: var(--overpass);
     display: flex;
+    position: relative;
     flex-direction: row-reverse;
     border-radius: 0 8rem 0 8rem;
     background: linear-gradient(to right,var(--vdgblue),var(--vdsatblue));
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.cont3 .circles{
+    z-index: 1;
+    position: absolute;
+    top: -130%;
+    left: -10%;
 }
 .cont3 .text{
+    z-index: 2;
     width: 50%;
     color: white;
     padding: 3rem;
@@ -180,6 +206,7 @@ background-color: transparent;
 }
 /* try placing the images inside cont2 and use positionbottom */
 .cont4{
+    /* margin-top: ; */
     font-family: var(--overpass);
     display: flex;
     padding: 2rem;
@@ -233,4 +260,43 @@ background-color: transparent;
 .cont5 ul li{
     font-size: 1.2rem;
     padding: 0.5rem;
+}
+.navbar{
+    position: relative;
+}
+/* .connectDropdown li{
+    padding: 1rem 0rem;
+    padding-left: 1rem;
+    width: 10rem;
+}
+.connectDropdown ul li p{
+    text-align: left;
+}
+#signupbtnandstforfree:hover,#signupbtnandstforfree p:hover{
+    background-color: hsl(355, 100%, 74%);
+    color: white;
+}
+.connectDropdown ul{
+    /* position: absolute;
+    bottom: -1rem; */
+    /* width: fit-content;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.5rem;
+} */
+.cont1>ul{
+    position: absolute;
+    z-index: 5;
+    /* z-index: 2; */
+    /* height: 300px; */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+}
+.cont1>ul li{
+    padding: 1rem 2rem;
 }

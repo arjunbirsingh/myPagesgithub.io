@@ -272,10 +272,7 @@ background-color: transparent;
 .connectDropdown ul li p{
     text-align: left;
 }
-#signupbtnandstforfree:hover,#signupbtnandstforfree p:hover{
-    background-color: hsl(355, 100%, 74%);
-    color: white;
-}
+
 .connectDropdown ul{
     /* position: absolute;
     bottom: -1rem; */
@@ -287,6 +284,10 @@ background-color: transparent;
     background-color: white;
     border-radius: 0.5rem;
 } */
+#signupbtnandstforfree:hover,#signupbtnandstforfree p:hover{
+    background-color: hsl(355, 100%, 74%);
+    color: white;
+}
 .cont1>ul{
     position: absolute;
     z-index: 5;

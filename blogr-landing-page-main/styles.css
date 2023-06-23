@@ -24,6 +24,7 @@
     padding: 0;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 button, li:hover{
     cursor: pointer;

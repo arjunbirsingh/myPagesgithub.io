@@ -126,6 +126,7 @@ background-color: transparent;
     background-color: white;
 }
 .cont2{
+    /* margin-bottom: 2rem; */
     font-family: var(--ubuntu);
     margin-top: 3rem;
     position: relative;
@@ -168,13 +169,34 @@ background-color: transparent;
     font-size: 1.2rem;
     color: var(--vdblue);
 }
+.wrapper{
+    position: absolute;
+    top: 97rem;
+    width: 507px;
+    height: 509px;
+    overflow-y: hidden;
+}
+@media screen and (max-width:1152px){
+    .wrapper{
+        top: 107rem;
+    }
+}
+@media screen and (max-width:950px){
+    .wrapper{
+        top: 115rem;
+    }
+}
 .phones{
     position: absolute;
+    top: -1.2rem;
     z-index: 2;
-    margin-top: -10%;
+    /* overflow-y: visible !important; */
 }
 .cont3{
+    position: relative;
+    min-height: 50vh;
     font-family: var(--overpass);
+    margin-top: 2rem;
     display: flex;
     position: relative;
     flex-direction: row-reverse;
@@ -183,6 +205,11 @@ background-color: transparent;
     overflow-y: hidden;
     overflow-x: hidden;
 }
+@media screen and (max-width:400px) {
+    .cont3{
+        height: 70vh;
+    }
+}
 .cont3 .circles{
     z-index: 1;
     position: absolute;
@@ -190,6 +217,8 @@ background-color: transparent;
     left: -10%;
 }
 .cont3 .text{
+    position: absolute;
+    bottom: 0;
     z-index: 2;
     width: 50%;
     color: white;
@@ -199,9 +228,11 @@ background-color: transparent;
     font-size: 3rem;
 }
 .cont3 p{
-    font-size: 1.1rem;
+    margin-top: 1.3rem;
+    /* background: url(images/icon-hamburger.svg); */
+    font-size: 1rem;
     letter-spacing: 0.2rem; 
-    line-height: 3rem;
+    line-height: 1.5rem;
     letter-spacing: 0.1rem;
 }
 /* try placing the images inside cont2 and use positionbottom */

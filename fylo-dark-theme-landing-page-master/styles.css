@@ -1,0 +1,227 @@
+::selection {
+  background-color: transparent;
+}
+li,
+button {
+  cursor: pointer;
+}
+li:hover{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  color: white;
+  box-sizing: border-box;
+}
+:root {
+  --db1: hsl(217, 28%, 15%);
+  --db2: hsl(218, 28%, 13%);
+  --db3: hsl(216, 53%, 9%);
+  --db4: hsl(219, 30%, 18%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --lgred: hsl(0, 100%, 63%);
+  --raleway: "Raleway", sans-serif;
+  --opensans: "Open Sans", sans-serif;
+}
+.centertext{
+    text-align: center;
+}
+body{
+    background-color: var(--db2);
+}
+.navbar {
+    background-color: var(--db1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.3rem;
+  font-family: var(--raleway);
+}
+.navbar .logoimg {
+  width: 80px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+.navbar li {
+  padding: 0 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.cont1{
+    padding: 1rem 2.2rem;
+    background-color: var(--db1);
+    /* background: url(images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+.cont1>img{
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 2rem;
+}
+.cont1>h2{
+font-family: var(--raleway);
+line-height: 2.2rem;
+font-size: 1.5rem;
+margin-bottom: 1rem;
+font-weight: 700;
+}
+.cont1>p{
+    font-family: var(--opensans);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.3rem;
+    margin-bottom: 2rem;
+}
+.btn{
+    background: linear-gradient(to bottom, var(--cyan),var(--blue));
+    font-weight: 700;
+    outline: none;
+    display: block;
+    padding: 1rem 5.5rem;
+    border-radius: 40px;
+    border: none;
+    margin: auto;
+}
+.btn:hover{
+    opacity: 0.5;
+}
+.cont2{
+    margin-top: 6rem;
+    background-color: var(--db2);
+}
+.cont2 .card{
+    padding: 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.cont2 .card>img{
+    width: 65px;
+    margin-bottom: 2rem;
+}
+.cont2 .card h3{
+    font-family: var(--raleway);
+    margin-bottom: 1.2rem;
+}
+.cont2 .card p{
+    font-family: var(--opensans);
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+}
+.cont3{
+    margin-top: 6rem;
+    background-color: var(--db2);
+    padding: 0 2rem;
+}
+.cont3>img{
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+.cont3>h3{
+    font-family: var(--raleway);
+    margin-bottom: 1.6rem;
+}
+.cont3>p{
+    font-family: var(--opensans);
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+.cont3 a p{
+    font-size: 1rem;
+    font-family: var(--opensans);
+    color: var(--cyan);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+.cont4{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    padding: 0 2.4rem;
+    font-family: var(--opensans);
+}
+.cont4>img{
+    position: relative;
+    width: 25px;
+}
+.cont4 .card{
+    background-color: var(--db4);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+.cont4 .card>p{
+    margin-bottom: 1.5rem;
+    /* color: red; */
+    font-size: 0.8rem;
+}
+.cont4 .wrapper{
+    display: inline;
+}
+.cont4 .wrapper img{
+    width: 30px;
+    border-radius: 50%;float: left;
+    margin-right: 1rem;
+}
+.cont4 .wrapper p{
+    display: inline;
+}
+.cont4 .wrapper .author{
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.cont4 .wrapper .this{
+    /* color: red; */
+    font-size: 0.6rem;
+    margin-top: -1rem;
+}
+.email{
+    margin-top: 6rem;
+    /* padding: 2rem; */
+    /* min-width: 300px; */
+    /* background-color: var(--db2); */
+    padding: 1rem;
+    font-family: var(--opensans);
+}
+.email .card{
+    background-color: var(--db1);
+    box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+}
+.email .card>h3{
+    margin-bottom: 1.5rem;
+}
+.email .card>p{
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+.email .card input{
+    padding: 1rem 3rem;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+}
+.email .card .btn{
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.email .error{
+    color: var(--db1);
+    font-size: 0.8rem;
+    /* display: none; */
+}

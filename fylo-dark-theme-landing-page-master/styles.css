@@ -59,6 +59,9 @@ body {
   font-size: 0.8rem;
   font-weight: 400;
 }
+.navbar li:hover{
+  font-weight: 700;
+}
 .cont1 {
   padding: 1rem 2.2rem;
   background-color: var(--db1) !important;
@@ -240,7 +243,7 @@ body {
   margin-top: 1.5rem;
 }
 .email .error {
-  /* color: var(--db1); */
+  color: red;
   font-size: 0.8rem;
   display: none;
 }

@@ -308,5 +308,34 @@
         <img src="images/logo-instagram.svg" alt="">
       </div>
     </footer>
+    <script>
+      let body=document.body;
+      function isValidEmail() {
+      let email=document.querySelector("#email");
+      let emailval=email.value;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      bool= emailRegex.test(emailval);
+      if(bool===true){
+        errormsg.style.display="none";
+      }
+      else{
+        errormsg.style.display="block";
+      }
+      }
+      let errormsg=document.querySelector(".error");
+      let bool=null;
+      let button=document.querySelector(".email button");
+      button.addEventListener("click",isValidEmail);
+      // let svgs=document.querySelectorAll(".socicons img, .cont3 p img");
+      // function colchange(){
+      //   console.log("i ran");
+      //   let contdoc=this.contentDocument;
+      //   console.log(contdoc);
+      // }
+      // svgs[0].addEventListener("mouseover",colchange);
+      // svgs[1].addEventListener("mouseover",colchange);
+      // svgs[2].addEventListener("mouseover",colchange);
+      // svgs[3].addEventListener("mouseover",colchange);
+    </script>
   </body>
 </html>

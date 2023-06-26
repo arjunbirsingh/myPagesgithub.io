@@ -23,7 +23,131 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <style></style>
+    <style>
+    @media screen and (min-width:868px){
+      .navbar{
+        padding: 2.5rem;
+      }
+      .navbar .logoimg{
+        width: 200px;
+      }
+      .navbar li{
+        padding: 2rem;
+        font-size: 1rem;
+      }
+      .cont1{
+        background: url(images/bg-curvy-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100%;
+      }
+      .cont1>img{
+        max-width: 720px;
+      }
+      .cont1>h2{
+        font-size: 3rem;
+        width: 60%;
+        margin: auto;
+        line-height: 5rem;
+      }
+      .cont1>p{
+        margin: auto;
+        margin-block: 3rem;
+        line-height: 2rem;
+        width: 60%;
+        font-size: 1.5rem;
+      }
+      .cont2{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+        column-gap: 2rem;
+      }
+      .cont2 .card{
+        max-width: 380px;
+      }
+      .cont2 .card h3{
+        font-size: 1.4rem;
+      }
+      .cont3{
+        display: flex;
+        gap: 2rem;
+      }
+      .cont3>img{
+        width: 50%;
+      }
+      .cont3 .wrapper{
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        flex-direction: column;
+      }
+      .cont3 .wrapper h3{
+        font-size: 3rem;
+        width: 80%;
+      }
+      .cont3 .wrapper p{
+        font-size: 1.1rem;
+        width: 90%;
+      }
+      .cont4{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5rem;
+      }
+      .cont4 .mobquotes{
+        position: relative;
+        left: 2rem;
+        top: -3rem;
+        width: 80px;
+        height: 80px;
+        z-index: -1;
+      }
+      .cont4 .card{
+        z-index: 2;
+        margin-left: 1rem;
+        max-width: 350px;
+        padding: 3rem 1.5rem;
+      }
+      .email{
+        max-width: 950px;
+        margin: auto;
+      }
+      .email h3{
+        font-size: 2.6rem;
+      }
+      .email .card>p{
+        font-size: 1.2rem;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 2rem;
+      }
+      .email input, .email button{
+        display: inline;
+        width: fit-content;
+      }
+      .email .emandbtn{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .email input{
+        width: 500px;
+      }
+      footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      footer .lgadd, .contact, .list1, .list2,.socicons{
+        width: 20%;
+        padding: 1rem;
+      }
+  }
+  </style>
   </head>
   <body>
     <div class="navbar">
@@ -85,23 +209,24 @@
         src="images/illustration-stay-productive.png"
         alt="illustration-intro"
       />
-      <h3>Stay productive, wherever you are</h3>
-      <p>
-        Never let location be an issue when accessing your files. Fylo has you
-        covered for all of your file storage needs.
-      </p>
-      <p>
-        Securely share files and folders with friends, family and colleagues for
-        live collaboration. No email attachments required.
-      </p>
-      <a href="#"
-        ><p>
-          See how Fylo works
-          <img src="images/icon-arrow.svg" alt="" /></p
-      ></a>
+      <div class="wrapper">
+        <h3>Stay productive, wherever you are</h3>
+        <p>
+          Never let location be an issue when accessing your files. Fylo has you
+          covered for all of your file storage needs.
+        </p>
+        <p>
+          Securely share files and folders with friends, family and colleagues for
+          live collaboration. No email attachments required.
+        </p>
+        <a href="#"
+          ><p>
+            See how Fylo works
+            <img src="images/icon-arrow.svg" alt="" /></p
+        ></a></div>
     </div>
     <div class="cont4">
-      <img src="images/bg-quotes.png" alt="icon-quotes" />
+      <img src="images/bg-quotes.png" class="mobquotes" alt="icon-quotes" />
       <div class="card">
         <p>
           Fylo has improved our team productivity by an order of magnitude.
@@ -141,10 +266,47 @@
         <h3>Get early access today</h3>
         <p>  It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
           questions, our support team would be happy to help you.</p>
-          <input placeholder="email@example.com" type="text" id="email">
-          <span class="error">Please enter a valid email address</span>
-          <button class="btn"><p>Get Started For Free</p></button>
+          <div class="emandbtn">
+            <div class="emanderr">
+              <input placeholder="email@example.com" type="text" id="email">
+              <span class="error">Please enter a valid email address</span>
+            </div>
+            <button class="btn"><p>Get Started For Free</p></button>
+  </div>
       </div>
     </div>
+    <footer>
+      <div class="lgadd">
+        <img src="images/logo.svg" class="fylofooter" alt="">
+        <p>
+            <img src="images/icon-location.svg" alt="">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+          dolore magna aliqua
+        </p>
+      </div>
+      <div class="contact">
+        <p><img src="images/icon-phone.svg" alt="">
+          +1-543-123-4567
+        </p>
+        <p><img src="images/icon-email.svg" alt="">
+          example@fylo.com</p>
+      </div>
+      <ul class="list1">
+        <li>About Us</li>
+        <li>Jobs</li>
+        <li>Press</li>
+        <li>Blog</li>
+      </ul>
+      <ul class="list2">
+        <li>Contact Us</li>
+        <li>Terms</li>
+        <li>Privacy</li>
+      </ul>
+      <div class="socicons">
+        <img src="images/logo-facebook.svg" alt="">
+        <img src="images/logo-twitter.svg" alt="">
+        <img src="images/logo-instagram.svg" alt="">
+      </div>
+    </footer>
   </body>
 </html>

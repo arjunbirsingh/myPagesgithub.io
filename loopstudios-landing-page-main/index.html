@@ -24,6 +24,108 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
+    <style>
+      @media screen and (min-width: 1200px) {
+        .mobmenu {
+          display: none;
+        }
+        .navbar {
+          padding-block: 2rem;
+          padding-inline: 0rem;
+          /* justify-content: space-evenly; */
+        }
+        .deskmenu {
+          display: flex;
+          color: white;
+        }
+        .deskmenu li {
+          display: inline;
+          margin-left: 2rem;
+        }
+        .cont1 {
+          padding-inline: 10rem;
+        }
+        .navLogo > img {
+          transform: scale(1.5);
+        }
+        .navHam {
+          display: none;
+        }
+        .cont1 {
+          background: url(images/desktop/image-hero.jpg) !important;
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+          background-position: center !important;
+        }
+        .cont1 h1 {
+          font-size: 4.5rem;
+          padding: 2rem;
+          line-height: normal;
+          max-width: 700px;
+        }
+        .cont2 {
+          padding: 10rem;
+          /* position: relative; */
+          padding-bottom: 0rem;
+        }
+        .cont2Img {
+          margin: 0;
+        }
+        .cont2Text {
+          position: absolute;
+          bottom: 0;
+          right: 10rem;
+          padding-top: 5rem;
+          background-color: white;
+          width: 500px;
+        }
+        .cont2Text h2 {
+          font-size: 3rem;
+        }
+        .cont2Text h2,
+        .cont2Text p {
+          text-align: left;
+        }
+        .cont3 {
+          padding: 10rem;
+        }
+        .cont3 .hidden {
+          display: inline;
+          margin: 0;
+        }
+        .cont3 .headandbutt {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 5rem;
+        }
+        .headandbutt h3 {
+          margin: 0;
+          font-size: 3rem;
+        }
+        .cont3 .cardcont {
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          gap: 1rem;
+        }
+        .cont3 button {
+          display: none;
+        }
+        footer {
+          display: flex;
+          justify-content: space-between;
+          padding-inline: 8rem;
+        }
+        footer ul {
+          display: flex;
+        }
+        footer .icandcop {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="cont1">
@@ -31,9 +133,25 @@
         <div class="navLogo">
           <img src="images/logo.svg" alt="logo" />
         </div>
+        <ul class="deskmenu">
+          <li>About</li>
+          <li>Carrers</li>
+          <li>Events</li>
+          <li>Products</li>
+          <li>Support</li>
+        </ul>
         <div class="navHam">
           <img src="images/icon-hamburger.svg" alt="navHam" />
         </div>
+      </div>
+      <div class="mobmenu">
+        <ul>
+          <li>About</li>
+          <li>Carrers</li>
+          <li>Events</li>
+          <li>Products</li>
+          <li>Support</li>
+        </ul>
       </div>
       <h1>IMMERSIVE EXPERIENCES THAT DELIVER</h1>
     </div>
@@ -57,6 +175,7 @@
     <div class="cont3">
       <div class="headandbutt">
         <h3>OUR CREATIONS</h3>
+        <button class="hidden"><p>see all</p></button>
       </div>
       <div class="cardcont">
         <div class="card">
@@ -95,50 +214,129 @@
       <button><p>see all</p></button>
     </div>
     <footer>
-      <div class="navLogo ftrLogo">
-        <img src="images/logo.svg" alt="logo" />
+      <div class="lgandul">
+        <div class="navLogo ftrLogo">
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+        <ul>
+          <li>About</li>
+          <li>Carrers</li>
+          <li>Events</li>
+          <li>Products</li>
+          <li>Support</li>
+        </ul>
       </div>
-      <ul>
-        <li>About</li>
-        <li>Carrers</li>
-        <li>Events</li>
-        <li>Products</li>
-        <li>Support</li>
-      </ul>
-      <div class="socicons">
-        <img src="images/icon-facebook.svg" alt="" />
-        <img src="images/icon-twitter.svg" alt="" />
-        <img src="images/icon-pinterest.svg" alt="" />
-        <img src="images/icon-instagram.svg" alt="" />
+      <div class="icandcop">
+        <div class="socicons">
+          <img src="images/icon-facebook.svg" alt="" />
+          <img src="images/icon-twitter.svg" alt="" />
+          <img src="images/icon-pinterest.svg" alt="" />
+          <img src="images/icon-instagram.svg" alt="" />
+        </div>
+        <p>© 2021 Loopstudios. All rights reserved.</p>
       </div>
-      <p>© 2021 Loopstudios. All rights reserved.</p>
     </footer>
     <script>
-      let body=document.body;
-      let card=document.querySelectorAll(".card");
-      card[0].addEventListener("mouseover",blurit);
-      card[1].addEventListener("mouseover",blurit);
-      card[2].addEventListener("mouseover",blurit);
-      card[3].addEventListener("mouseover",blurit);
-      card[4].addEventListener("mouseover",blurit);
-      card[5].addEventListener("mouseover",blurit);
-      card[6].addEventListener("mouseover",blurit);
-      card[7].addEventListener("mouseover",blurit);
-      card[1].addEventListener("mouseout",revertit);
-      card[0].addEventListener("mouseout",revertit);
-      card[2].addEventListener("mouseout",revertit);
-      card[3].addEventListener("mouseout",revertit);
-      card[4].addEventListener("mouseout",revertit);
-      card[5].addEventListener("mouseout",revertit);
-      card[6].addEventListener("mouseout",revertit);
-      card[7].addEventListener("mouseout",revertit);
-      function blurit(){
-        let img=this.getElementsByTagName("img");
-        img[0].style.opacity="0.4";
+      let body = document.body;
+      let togvar = 0;
+      let navHam = document.querySelector(".navHam>img");
+      let mobmenu = document.querySelector(".mobmenu");
+      let cont1 = document.querySelector(".cont1");
+      let navbar = document.querySelector(".navbar");
+      navHam.addEventListener("click", toggle);
+      function toggle() {
+        if (togvar === 1) {
+          navHam.setAttribute("src", "images/icon-hamburger.svg");
+          togvar = 0;
+          mobmenu.style.display = "none";
+          cont1.style.background = "url(images/mobile/image-hero.jpg)";
+          cont1.style.backgroundRepeat = "no-repeat";
+          cont1.style.backgroundSize = "cover";
+          cont1.style.backgroundPosition = "center";
+          cont1.style.paddingInline = "2rem";
+          navbar.style.paddingInline="0";
+        } else {
+          navHam.setAttribute("src", "images/icon-close.svg");
+          togvar = 1;
+          mobmenu.style.display = "block";
+          cont1.style.background = "black";
+          cont1.style.paddingInline = "0";
+          navbar.style.paddingInline="2rem";
+        }
       }
-      function revertit(){
-        let img=this.getElementsByTagName("img");
-        img[0].style.opacity="1";
+      let card = document.querySelectorAll(".card");
+      card[0].addEventListener("mouseover", blurit);
+      card[1].addEventListener("mouseover", blurit);
+      card[2].addEventListener("mouseover", blurit);
+      card[3].addEventListener("mouseover", blurit);
+      card[4].addEventListener("mouseover", blurit);
+      card[5].addEventListener("mouseover", blurit);
+      card[6].addEventListener("mouseover", blurit);
+      card[7].addEventListener("mouseover", blurit);
+      card[1].addEventListener("mouseout", revertit);
+      card[0].addEventListener("mouseout", revertit);
+      card[2].addEventListener("mouseout", revertit);
+      card[3].addEventListener("mouseout", revertit);
+      card[4].addEventListener("mouseout", revertit);
+      card[5].addEventListener("mouseout", revertit);
+      card[6].addEventListener("mouseout", revertit);
+      card[7].addEventListener("mouseout", revertit);
+      function blurit() {
+        let img = this.getElementsByTagName("img");
+        img[0].style.opacity = "0.4";
+      }
+      function revertit() {
+        let img = this.getElementsByTagName("img");
+        img[0].style.opacity = "1";
+      }
+      srcchanger();
+      window.addEventListener("resize", srcchanger);
+      function srcchanger() {
+        let cardimg, intimgdesk;
+        if (window.innerWidth >= 1200) {
+          //changes img src
+          intimgdesk = document.querySelector(".cont2Img>img");
+          intimgdesk.setAttribute(
+            "src",
+            "/images/desktop/image-interactive.jpg"
+          );
+          cardimg = document.querySelectorAll(".card img");
+          for (i = 0; i < 8; i++) {
+            let src = cardimg[i].getAttribute("src");
+            // console.log(src);
+            let startIndex = src.indexOf("/");
+            // console.log(startIndex);
+            let endIndex = startIndex + 1;
+            while (src.charAt(endIndex) != "/") {
+              endIndex++;
+            }
+            // console.log(endIndex);
+            src = src.replace(src.substring(startIndex, endIndex), "/desktop");
+            cardimg[i].setAttribute("src", src);
+            // console.log(src);
+          }
+        } else {
+          intimgdesk = document.querySelector(".cont2Img>img");
+          intimgdesk.setAttribute(
+            "src",
+            "/images/mobile/image-interactive.jpg"
+          );
+          cardimg = document.querySelectorAll(".card img");
+          for (i = 0; i < 8; i++) {
+            let src = cardimg[i].getAttribute("src");
+            // console.log(src);
+            let startIndex = src.indexOf("/");
+            // console.log(startIndex);
+            let endIndex = startIndex + 1;
+            while (src.charAt(endIndex) != "/") {
+              endIndex++;
+            }
+            // console.log(endIndex);
+            src = src.replace(src.substring(startIndex, endIndex), "/mobile");
+            cardimg[i].setAttribute("src", src);
+            // console.log(src);
+          }
+        }
       }
     </script>
   </body>

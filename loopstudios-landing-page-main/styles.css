@@ -34,22 +34,22 @@ li:hover {
 .deskmenu li {
   display: none;
 }
-.mobmenu{
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
-    font-family: var(--josefin);
-    font-weight: 400;
-    font-size: 2rem;
-    padding: 2rem;
-    margin-top: 2rem;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: none;
+.mobmenu {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--josefin);
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
 }
-.mobmenu li:hover{
-    text-decoration: none;
+.mobmenu li:hover {
+  text-decoration: none;
 }
 .cont1 {
   padding: 2.2rem 1.3rem;
@@ -156,6 +156,10 @@ li:hover {
   width: 40%;
   font-weight: 400;
 }
+.cardcont .card > img:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
 .cont3 button {
   background-color: white;
   margin: auto;
@@ -193,9 +197,12 @@ footer .socicons {
 }
 footer .socicons img {
   padding-inline: 0.4rem;
+  position: relative;
 }
 footer .socicons img:hover {
   cursor: pointer;
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
 }
 footer p {
   color: var(--vdgray);

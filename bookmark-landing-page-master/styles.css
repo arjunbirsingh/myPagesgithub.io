@@ -1,0 +1,340 @@
+:root {
+  --rubik: "Rubik", sans-serif;
+  --sfblue: hsl(231, 69%, 60%);
+  --sfred: hsl(0, 94%, 66%);
+  --grblue: hsl(229, 8%, 60%);
+  --vdblue: hsl(229, 31%, 21%);
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: var(--rubik);
+}
+ul {
+  list-style-type: none;
+}
+li,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: white;
+  color: var(--sfblue);
+  border: 1px solid var(--sfblue);
+}
+nav {
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--vdblue);
+}
+nav li {
+  display: none;
+  padding-inline: 1rem;
+}
+nav button {
+  padding: 1rem 3rem;
+  color: white;
+  font-weight: 500;
+  background-color: var(--sfred);
+  text-transform: uppercase;
+}
+.cont1 .contImg {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  max-width: 670px;
+  position: relative;
+}
+.cont1 .contImg img {
+  max-width: 100%;
+  z-index: 1;
+}
+.contImg .wrapper {
+  position: relative;
+}
+.cont1 .contImg .box {
+  background-color: var(--sfblue);
+  border-bottom-left-radius: 20%;
+  position: absolute;
+  z-index: -1;
+  right: -30%;
+  top: 20%;
+}
+.cont1 .contText {
+  padding-inline: 2rem;
+}
+.cont1 .contText > h1 {
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: var(--vdblue);
+}
+.cont1 .contText > p {
+  color: var(--grblue);
+  line-height: 1.8rem;
+}
+.cont1 .contText > button {
+  margin-inline: 0.5rem;
+  padding: 0.8rem 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.on-chrome {
+  color: white;
+  background-color: var(--sfblue);
+}
+.cont2 .features {
+  padding: 2rem;
+  color: var(--vdblue);
+}
+.cont2 .features h2 {
+  margin-bottom: 2rem;
+}
+.cont2 .features > p {
+  color: var(--grblue);
+  margin-bottom: 2rem;
+}
+.cont2 ul {
+  justify-content: center;
+  align-items: center;
+}
+.cont2 li {
+  /* margin: auto; */
+  padding: 1.1rem;
+  font-size: 1.1rem;
+  border-top: 1px solid var(--grblue);
+  border-bottom: 1px solid var(--grblue);
+  border-collapse: collapse;
+  font-weight: 400;
+  cursor: pointer;
+  color: hsl(225, 4%, 42%);
+}
+.no-border {
+  border: none !important;
+}
+.cont2 li:hover {
+  font-weight: 500;
+  color: var(--vdblue);
+  position: relative;
+}
+.cont2 li:hover::after{
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 150px;
+  height: 5px;
+  background-color: var(--sfred);
+  border-radius: 1px;
+}
+.cont2 .featuresDisp{
+  position: relative;
+  padding: 2rem;
+  padding-left: 0;
+}
+.cont2 .wrapper{
+  padding: 2rem;
+  padding-left: 0;
+  position: relative;
+}
+.cont2 .wrapper .box{
+  background-color: var(--sfblue);
+  border-bottom-right-radius: 30%;
+  width: 300px;
+  height: 200px;
+}
+.cont2 .featuresDisp .wrapper img{
+  max-width: 100% !important;
+  padding: 1rem;
+  position: absolute;
+  left: 1rem;
+  top: -2rem;
+}
+.cont2 .contText{
+  padding: 1.5rem;
+}
+.cont2 .contText h2{
+  margin-bottom: 1.5rem;
+  color: var(--vdblue);
+}
+.cont2 .contText p{
+  color: var(--grblue);
+  line-height: 1.6rem;
+}
+.more-info{
+  background-color: var(--sfblue);
+  padding: 0.5rem 2rem;
+  margin-top: 2rem;
+  display: none;
+}
+.more-info>p{
+  font-size: 1rem;
+  font-weight: 500;
+  color: white !important;
+}
+.cont3{
+  padding: 2rem;
+}
+.cont3 .contText{
+  margin-top: 5rem;
+}
+.cont3 .contText h2{
+  margin-bottom: 1rem;
+  color: var(--vdblue);
+}
+.cont3 .contText p{
+  color: var(--grblue);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.cont3 .card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-block: 2rem;
+  margin: auto;
+  margin-top: 3rem;
+  max-width: 400px;
+  border-radius: 5px;
+}
+.cont3 .card img{
+  max-width: 100%;
+}
+.cont3 .card h2{
+  color: var(--vdblue);
+  margin-block: 2rem 0.7rem;
+}
+.cont3 .card p{
+  color: var(--grblue);
+  margin-bottom: 2rem;
+}
+.cont3 .bg-dots{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+ .card-btns{
+  background-color: var(--sfblue);
+  padding: 1rem 2.5rem;
+  color: white;
+  font-weight: 500;
+}
+.cont4 {
+  margin-top: 5rem;
+  color: var(--vdblue);
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+.cont4>p{
+  margin-top: 1rem;
+  color: var(--grblue);
+  margin-bottom: 3rem;
+}
+.cont4 ul{
+  text-align: left;
+}
+.cont4 li{
+  cursor: pointer;
+  position: relative;
+  padding-block: 1.1rem;  
+  border-top: 1px solid var(--grblue);
+  border-bottom: 1px solid var(--grblue);
+}
+.cont4 ul li p{
+  text-align: left;
+}
+.cont4 li img{
+  position: absolute;
+  top: 1.1rem;
+  right: 0;
+}
+.cont4 .detail{
+  display: none;
+  color: hsl(225, 4%, 45%);
+}
+.cont4 button{
+  margin-top: 2rem;
+}
+.cont-email{
+  background-color: var(--sfblue);
+  color: white;
+  padding: 4rem 2rem;
+  margin-top: 5rem;
+}
+.cont-email input::placeholder{
+  color: var(--grblue);
+  text-align: left;
+}
+.cont-email input{
+  padding: 1rem;
+  width: 100%;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  display: block;
+  margin-block: 2rem 1rem;
+}
+.cont-email button{
+  background-color: var(--sfred);
+  padding: 1rem;
+  width: 100%;
+  color: white;
+  font-weight: 500;
+}
+.cont-email button:hover{
+  background-color: white;
+  color: var(--sfred);
+  border: 2px solid var(--sfred);
+}
+.cont-email p{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  max-width: 350px;
+  margin: auto;
+}
+.cont-email h2{
+  margin-bottom: 2rem;
+  max-width: 350px;
+  margin: auto;
+}
+footer{
+  background-color: var(--vdblue);
+  color: white;
+  padding: 2rem;
+}
+footer li{
+  padding: 1rem;
+  text-transform: uppercase;
+}
+footer .logos{
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+footer .logos img{
+  padding: 1rem;
+}

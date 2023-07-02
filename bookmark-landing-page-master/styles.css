@@ -114,6 +114,9 @@ nav button {
 .cont2 .features > p {
   color: var(--grblue);
   margin-bottom: 2rem;
+  max-width: 450px;
+  margin: auto;
+  margin-bottom: 3rem;
 }
 .cont2 ul {
   justify-content: center;
@@ -271,9 +274,13 @@ nav button {
 .cont4 .detail{
   display: none;
   color: hsl(225, 4%, 45%);
+  margin-top: 1rem;
 }
 .cont4 button{
   margin-top: 2rem;
+}
+.cont4 ul p:hover{
+  color: var(--sfred);
 }
 .cont-email{
   background-color: var(--sfblue);

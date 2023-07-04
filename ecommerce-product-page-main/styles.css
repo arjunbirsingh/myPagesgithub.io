@@ -16,7 +16,38 @@
   box-sizing: border-box;
   font-family: var(--fonfam);
 }
+button:hover{
+  opacity: 0.5;
+}
+.mobilemenu{
+  padding: 1rem;
+  background-color: white;
+  position: fixed;
+  z-index: 4;
+  height: 100%;
+  display:none;
+  width: 70%;
+  box-shadow: 10px 10px 50px var(--black);
+}
+.mobilemenu #cross{
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.mobilemenu ul{
+  list-style-type: none;
+  margin-right: 6rem;
+}
+.mobilemenu li{
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: black;
+  font-weight: 700;
+  padding-block: 0.8rem;
+}
 nav {
+  /* position: sticky;
+  top: 0; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,8 +58,84 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+.cartInfo{
+  display: none;
+  position: absolute;
+  z-index: 2;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 95%;
+  max-width: 400px;
+  color: var(--dgrayblue);
+  padding: 2rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+.cartAndPfp #amount{
+  background-color: var(--orange);
+  color: white;
+  font-weight: 700;
+  padding: 0px 8px;
+  border-radius:50%;
+  position: absolute;
+  top: -0.9rem;
+  margin-left: 0.8rem;
+}
+.cartInfo h4{
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.cartInfo #detail{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: none;
+}
+#cartisempty{
+  width: fit-content;
+  margin: auto;
+  margin-top: 2rem;
+  /* display: none; */
+}
+.cartInfo .ptags{
+  margin-left: 1rem;
+}
+#delete{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  right: -0.6rem;
+}
+.cartInfo #thumbnail{
+  width: 50px;
+  border-radius: 5px;
+  display: inline;
+}
+.cartInfo button{
+  background-color: var(--orange);
+  text-align: center;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding-block: 1rem;
+  margin: auto;
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  /* margin-bottom: 2rem; */
+  font-weight: 700;
 }
 #menuLogo {
+  cursor: pointer;
   margin-right: 1rem;
 }
 #pfp {
@@ -79,85 +186,109 @@ nav {
 #next {
   right: 1rem;
 }
-main .textcont{
+main .textcont {
   padding: 1rem;
+  max-width: 600px;
+  margin: auto;
 }
-main h2{
+main h2 {
   font-size: 0.9rem;
   letter-spacing: 1px;
   font-weight: 700;
   color: var(--orange);
   text-transform: uppercase;
 }
-main h1{
+main h1 {
   text-transform: capitalize;
   font-weight: 700;
   margin-top: 0.5rem;
   font-size: 1.8rem;
 }
-.textcont>#detail{
+.textcont > #detail {
   color: var(--dgrayblue);
   margin-top: 1rem;
   font-size: 1rem;
   font-weight: 400;
 }
-.textcont #currency{
+.textcont #currency {
   display: flex;
   align-items: center;
   position: relative;
   margin-top: 2rem;
 }
-.textcont #dollar{
+.textcont #dollar {
   color: black;
   font-size: 2rem;
   font-weight: 700;
 }
-.textcont #discount{
+.textcont #discount {
   background-color: var(--paleorange);
   padding: 0.2rem;
   margin-left: 1rem;
   border-radius: 5px;
   color: var(--orange);
+  font-weight: 700;
 }
-.textcont #cutPrice{
+.textcont #cutPrice {
   color: var(--grayblue);
   position: absolute;
   right: 0;
 }
-.amountButton{
+.amountButton {
   background-color: var(--lggrayblue);
   padding: 1rem 0.5rem;
-  margin-top: 2rem;
   border-radius: 10px;
   text-align: center;
-  position:relative;
+  position: relative;
   max-width: 600px;
   margin: auto;
+  margin-top: 2rem;
 }
-#plus,#minus{
+.amountButton span{
+  font-weight: 700;
+}
+#plus,
+#minus {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
-#minus{
+#minus {
   left: 1rem;
 }
-#plus{
+#plus {
   right: 1rem;
 }
-.textcont>button{
+.textcont > button {
   background-color: var(--orange);
   text-align: center;
   color: white;
   outline: none;
   border: none;
   border-radius: 10px;
-  padding-block: 1rem;
+  padding-block: 1.5rem;
   margin: auto;
   margin-top: 2rem;
   display: block;
   width: 100%;
   max-width: 400px;
   margin-bottom: 3rem;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+  box-shadow: 0 0 20px 0 var(--orange);
+}
+button svg,
+button p {
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20%; */
+  font-size: 1rem;
+  display: inline;
 }

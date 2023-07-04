@@ -110,3 +110,31 @@ function showornot() {
     i = 0;
   }
 }
+let tb1=document.querySelector("#tb1");
+let tb2=document.querySelector("#tb2");
+let tb3=document.querySelector("#tb3");
+let tb4=document.querySelector("#tb4");
+tb1.addEventListener("click",changeimg);
+tb2.addEventListener("click",changeimg);
+tb3.addEventListener("click",changeimg);
+tb4.addEventListener("click",changeimg);
+function changeimg(){
+  // console.log(this.id);
+  if(this.id=="tb1"){
+    shoes.setAttribute("src","images/image-product-1.jpg")
+    // this.style.border="6px solid var(--orange)";
+  }
+  else if(this.id=="tb2"){
+    shoes.setAttribute("src","images/image-product-2.jpg")
+    // this.style.border="6px solid var(--orange)";
+  }
+  else if(this.id=="tb3"){
+    shoes.setAttribute("src","images/image-product-3.jpg")
+    // this.style.border="6px solid var(--orange)";
+  }
+  else if(this.id=="tb4"){
+    shoes.setAttribute("src","images/image-product-4.jpg")
+    // this.style.border="6px solid var(--orange)";
+  }
+  else{}
+}

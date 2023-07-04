@@ -90,7 +90,7 @@ deleteicon.addEventListener("click", eraseAll);
 function eraseAll() {
   detail.style.display = "none";
   cartisempty.style.display = "block";
-  carthead.style.display = "none";
+  carthead.innerText = "";
 }
 let mobilemenu = document.querySelector(".mobilemenu");
 let cross = document.querySelector("#cross");

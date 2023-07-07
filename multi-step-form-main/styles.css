@@ -1,0 +1,282 @@
+:root {
+  --fonfam: "Ubuntu", sans-serif;
+  --marineblue: hsl(213, 96%, 18%);
+  --purplishblue: hsl(243, 100%, 62%);
+  --pastelblue: hsl(228, 100%, 84%);
+  --lgblue: hsl(206, 94%, 87%);
+  --stred: hsl(354, 84%, 57%);
+  --coolgray: hsl(231, 11%, 63%);
+  --lggray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  font-family: var(--fonfam);
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--lgblue);
+}
+button,
+input,
+.circle {
+  cursor: pointer;
+}
+.container {
+  background-color: white;
+  box-shadow: 2px 2px 30px black;
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  /* justify-content: space-between; */
+  width: 980px !important;
+}
+.sideImg {
+  background: url(assets/images/bg-sidebar-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 568px;
+  min-width: 274px;
+  box-shadow: 2px 2px 20px black;
+  border-radius: 10px;
+  /* 274 568 */
+}
+.stepContainer {
+  /* width: fit-content;
+    margin: auto; */
+  padding-top: 0.2rem;
+  padding-left: 2rem;
+}
+.step {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+.stepInfo p:nth-of-type(1) {
+  /* color: red; */
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.stepInfo p:nth-of-type(2) {
+  font-weight: 700;
+}
+.circle {
+  /* background-color: var(--pastelblue); */
+  /* background-color: transparent; */
+  border: 2px solid white;
+  width: fit-content;
+  padding: 0.5rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.mainContent {
+  /* padding-inline-end: 5rem; */
+  position: relative;
+  margin-left: 3rem;
+}
+.mainContent .top h1 {
+  font-size: 2.6rem;
+  color: var(--marineblue);
+  margin-top: 1.5rem;
+}
+.top p {
+  color: var(--coolgray);
+  font-size: 1.2rem;
+  /* letter-spacing: 1px; */
+  margin-top: 0.5rem;
+}
+form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin-bottom: 0.5rem;
+}
+form input {
+  padding: 1.2rem 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid var(--lggray);
+  font-size: 1.2rem;
+}
+form input::placeholder {
+  color: var(--coolgray);
+  font-weight: 500;
+  font-size: 1rem;
+}
+form input:invalid {
+  border-color: red;
+}
+form input:focus {
+  border-color: var(--purplishblue);
+}
+.bottom button {
+  position: absolute;
+  bottom: 2rem;
+  right: 5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  padding: 0.7rem 1rem;
+  background-color: var(--marineblue);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.bottom button:hover {
+  background-color: var(--purplishblue);
+}
+.bottom .goback {
+  background-color: transparent;
+  color: var(--coolgray);
+  width: fit-content;
+  position: absolute;
+  left: 4rem;
+  /* left: 0; */
+}
+.goback:hover {
+  background-color: transparent !important;
+  font-weight: 700;
+  color: black;
+}
+/* step2contetn start */
+
+.step2content {
+  display: grid;
+  margin-top: 3rem;
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  padding: 1rem;
+}
+.card1,
+.card2,
+.card3 {
+  padding: 1rem;
+  /* background-color: red; */
+  border: 2px solid var(--coolgray);
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px black;
+}
+.border-color {
+  border-color: var(--purplishblue);
+  border-width: 3px;
+}
+.card1 img,
+.card2 img,
+.card3 img {
+  margin-bottom: 2rem;
+}
+.step2content .toggle {
+  box-shadow: 2px 2px 20px black;
+  grid-column: 1/4;
+  text-align: center;
+  padding-block: 0.6rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+  background-color: var(--magnolia);
+}
+.toggle p {
+  display: inline;
+}
+.toggle .togButt {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--marineblue);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+}
+.togButt .circleButton {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: auto;
+}
+.optionCont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+}
+.optionCard {
+  box-shadow: 2px 2px 30px black;
+  display: flex;
+  border: 2px solid var(--coolgray);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  position: relative;
+}
+.optionCard .wrapper {
+  margin-left: 1rem;
+}
+#opt1 .wrapper::after {
+  content: "+ $1/mo";
+  color: var(--purplishblue);
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+}
+#opt2 .wrapper::after {
+  content: "+ $2/mo";
+  color: var(--purplishblue);
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+}
+#opt3 .wrapper::after {
+  content: "+ $2/mo";
+  color: var(--purplishblue);
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+}
+.optionCard input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 10px;
+  appearance: none;
+  border: 1px solid var(--coolgray);
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.optionCard input[type="checkbox"]:checked {
+  background-color: var(--purplishblue);
+}
+.optionCard h3 {
+  font-size: 1.3rem;
+  color: var(--marineblue);
+}
+.optionCard p {
+  color: var(--coolgray);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

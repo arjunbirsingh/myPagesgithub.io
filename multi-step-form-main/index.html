@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sideImg">
+        <div class="stepContainer">
+          <div class="step">
+            <div id="step1" class="circle"><p>1</p></div>
+            <div class="stepInfo">
+              <p>STEP 1</p>
+              <p>YOUR INFO</p>
+            </div>
+          </div>
+          <div class="step">
+            <div id="step2" class="circle"><p>2</p></div>
+            <div class="stepInfo">
+              <p>STEP 2</p>
+              <p>SELECT PLAN</p>
+            </div>
+          </div>
+          <div class="step">
+            <div id="step3" class="circle"><p>3</p></div>
+            <div class="stepInfo">
+              <p>STEP 3</p>
+              <p>ADD-ONS</p>
+            </div>
+          </div>
+          <div class="step">
+            <div id="step4" class="circle"><p>4</p></div>
+            <div class="stepInfo">
+              <p>STEP 4</p>
+              <p>SUMMARY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mainContent">
+        <div class="top">
+          <h1 class="heading">Personal Info</h1>
+          <p class="para">
+            Please provide your name, email address and phone number.
+          </p>
+        </div>
+        <!-- step1form -->
+        <form action="">
+          <label for="name">Name</label
+          ><input placeholder="e.g. Stephen King" type="text" id="name" />
+          <label for="email">Email Address</label
+          ><input
+            placeholder="e.g. stephenking@lorem.com"
+            type="email"
+            id="email"
+          />
+          <label for="number">Number</label
+          ><input
+            placeholder="e.g. +1 234 567 890
+          "
+            type="number"
+            id="number"
+          />
+        </form>
+        <!-- step1form -->
+
+        <!-- step2start -->
+        <div class="step2content">
+          <div class="card1">
+            <img src="assets/images/icon-arcade.svg" alt="arcade" id="arcade" />
+            <h2>Arcade</h2>
+            <p id="rate">$9/mo</p>
+            <p style="color: var(--marineblue);font-weight:700;
+            display:none;" id="twomonthsfree">2 months free</p>
+          </div>
+          <div class="card2">
+            <img
+              src="assets/images/icon-advanced.svg"
+              alt="advanced"
+              id="advanced"
+            />
+            <h2>Advanced</h2>
+            <p id="rate">$12/mo</p>
+            <p style="color: var(--marineblue);font-weight:700;
+            display:none;" id="twomonthsfree">2 months free</p>
+          </div>
+          <div class="card3">
+            <img src="assets/images/icon-pro.svg" alt="pro" id="arcade" />
+            <h2>Pro</h2>
+            <p id="rate">$15/mo</p>
+            <p style="color: var(--marineblue);font-weight:700;
+            display:none;" id="twomonthsfree">2 months free</p>
+          </div>
+          <div class="toggle">
+            <span
+              ><p>Monthly</p>
+              <div class="togButt">
+                <div class="circleButton"></div>
+              </div>
+              <p>Yearly</p></span
+            >
+          </div>
+        </div>
+        <!-- step2 end -->
+        <!-- step3start -->
+        <div class="optionCont">
+          <div class="optionCard" id="opt1">
+            <input type="checkbox" id="op1box" />
+            <div class="wrapper">
+              <h3>Online service</h3>
+              <p>Access to multiplayer games</p>
+            </div>
+          </div>
+          <div class="optionCard" id="opt2">
+            <input type="checkbox" id="op2box" />
+            <div class="wrapper">
+              <h3>Larger storage</h3>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+          </div>
+          <div class="optionCard" id="opt3">
+            <input type="checkbox" id="op3box" />
+            <div class="wrapper">
+              <h3>Customizable profile</h3>
+              <p>Custom theme on your profile</p>
+            </div>
+          </div>
+        </div>
+        <!-- step3end -->
+        <!-- step4start -->
+        <div class="step4summary">
+          <div class="details">
+            <p id="whatplan"></p>
+            <p id="change">Change</p>
+          </div>
+          <div class="total"><p>Total (per month)</p></div>
+          <p id="totalpermonth"></p>
+        </div>
+        <!-- step4end -->
+        <div class="bottom">
+          <button class="goback"><p>Go Back</p></button>
+          <button class="nextstep"><p>Next Step</p></button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

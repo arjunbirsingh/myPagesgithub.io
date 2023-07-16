@@ -171,6 +171,11 @@ form input:focus {
   border-radius: 5px;
   box-shadow: 2px 2px 20px black;
 }
+.card1,
+.card2,
+.card3 :hover{
+  cursor: pointer;
+}
 .border-color {
   border-color: var(--purplishblue);
   border-width: 3px;
@@ -227,6 +232,7 @@ form input:focus {
   margin-bottom: 1rem;
   padding: 1rem 2rem;
   position: relative;
+  cursor: pointer;
 }
 .optionCard .wrapper {
   margin-left: 1rem;

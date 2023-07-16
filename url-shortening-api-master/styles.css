@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --cyan: hsl(180, 66%, 49%);
+  --dvio: hsl(257, 27%, 26%);
+  --red: hsl(0, 87%, 67%);
+  --gray: hsl(0, 0%, 75%);
+  --gvio: hsl(257, 7%, 63%);
+  --vdblue: hsl(255, 11%, 22%);
+  --vdvio: hsl(260, 8%, 14%);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+p,
+li {
+  color: var(--gvio);
+  list-style-type: none;
+}
+button,
+input,
+li {
+  cursor: pointer;
+}
+button {
+  border: none;
+}
+button > p {
+  color: white;
+}
+button:hover {
+  font-weight: 700;
+  opacity: 0.5;
+}
+li:hover {
+  font-weight: 700;
+}
+nav {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 10px 10px 40px rgb(130, 118, 118);
+}
+nav > img,
+nav > button {
+  align-self: center;
+}
+nav>img{
+    display: flex;
+    align-items: flex-end;
+}
+nav ul {
+  display: flex;
+  margin-inline: 3rem auto;
+  display: none;
+}
+nav li {
+  padding-inline-start: 1rem;
+}
+nav li:hover {
+  color: var(--vdvio);
+}
+nav button {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: none;
+}
+nav #btn1 {
+  background-color: transparent;
+  font-weight: 700;
+}
+nav #btn1 p{
+    color: var(--gvio);
+}
+nav #btn2 {
+  background-color: var(--cyan);
+  font-weight: 700;
+}
+nav #btn2 p {
+  color: white;
+}
+.menu{
+    position: fixed;
+    margin-top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 22;
+    background-color: var(--dvio);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.menutoggle{
+    display:none;
+}
+.menu ul{
+    margin-block: 3rem;
+}
+.menu li{
+    color: white;
+    padding-block: 1rem;
+    font-size: 1.3rem;
+}
+.menu hr{
+    background-color: white;
+    height: 1px;
+    margin-bottom: 3rem;
+    width: 90%;
+}
+.menu button{
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1.4rem;
+}
+#menubtn1{
+    background-color: transparent;
+    margin-bottom: 1rem;
+}
+#menubtn2{
+    margin-bottom: 3rem;
+    width: 90%;
+    background-color: var(--cyan);
+    color: white;
+}
+.working {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.working .sideImg {
+  overflow-x: hidden;
+}
+.working img {
+  max-width: 135%;
+  margin: auto;
+  display: block;
+}
+.working .text {
+  margin-top: 3rem;
+  padding: 2rem;
+}
+.working h1 {
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 2.8rem;
+  color: var(--vdvio);
+  margin-bottom: 1rem;
+}
+.working .text > p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+#get-started {
+  background-color: var(--cyan);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  box-shadow: 10px 10px 50px rgb(105, 105, 105);
+}
+
+.advanced-stats {
+  margin-top: 8rem;
+  padding: 2rem;
+  padding-bottom: 0;
+  text-align: center;
+  background-color: rgb(237, 237, 237);
+}
+.advanced-stats h2,
+.advanced-stats h3 {
+  color: var(--vdvio);
+}
+.shorten-it {
+  background: url(images/bg-shorten-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: var(--vdblue);
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  padding: 2rem;
+  box-shadow: 10px 10px 10px rgb(105, 105, 105);
+}
+.shorten-it input {
+  padding: 1rem;
+  border-radius: 7px;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+.shorten-it::placeholder {
+  color: var(--gray);
+  font-size: 1.2rem;
+}
+.shorten-it button {
+  background-color: var(--cyan);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.8rem;
+  border-radius: 7px;
+  border: none;
+}
+
+.advanced-stats > h2 {
+  margin-top: 4rem;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+}
+.advanced-stats > p {
+  margin-bottom: 3rem;
+}
+.advanced-stats .vruler {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: var(--cyan);
+}
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  z-index: 15;
+  position: relative;
+  max-width: 350px;
+  background-color: white;
+  margin-bottom: 5rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px var(--gvio);
+  padding: 1rem;
+}
+#card3 {
+  margin-bottom: 0;
+}
+.card > h3 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  font-size: 1.4rem;
+}
+.card > p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7rem;
+}
+.card > img {
+  background-color: var(--vdblue);
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.advanced-stats > div,
+.advanced-stats > h2,
+.advanced-stats > p {
+  position: relative;
+  top: -129px;
+}
+
+.boost{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-block: 5rem;
+    background: url(images/bg-boost-mobile.svg);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--dvio);
+}
+.boost>h2{
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: white;
+}
+.boost>button{
+    align-self: center;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--vdvio);
+    display: flex;
+    flex-direction: column;
+    padding-block: 3rem;
+}
+footer>img{
+    align-self: center;
+}
+footer .list>p{
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+footer li{
+    color: gray;
+    font-weight: 500;
+    padding-block: 0.2rem;
+}
+footer .icons{
+    margin-block-start: 4rem;
+}
+footer .icons img{
+    padding: 0.6rem;
+}
+footer li:hover{
+    color: var(--cyan);
+}

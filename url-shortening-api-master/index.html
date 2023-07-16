@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <style>
+      @media screen and (min-width: 950px) {
+        #get-started {
+          padding: 1rem 3rem;
+          font-weight: 700;
+        }
+        .working {
+          flex-direction: row-reverse;
+          text-align: left;
+        }
+        .working .text {
+          width: 60%;
+          padding-left: 4rem;
+        }
+        .working .sideImg {
+          display: flex;
+          align-items: center;
+        }
+        .working img {
+          max-width: 100%;
+        }
+        .working h1 {
+          font-size: 4.2rem;
+          max-width: 700px;
+          line-height: 5rem;
+        }
+        .working .text > p {
+          max-width: 500px;
+        }
+      }
+
+      /* mainstuff */
+      @media screen and (min-width: 786px) {
+        nav #ham {
+          display: none;
+        }
+        nav ul {
+          display: flex;
+        }
+        nav button {
+          display: inline;
+        }
+
+        .shorten-it {
+          display: flex;
+          flex-direction: row;
+          max-width: 1000px;
+          margin: auto;
+          margin-top: 2rem;
+          padding: 3rem;
+        }
+        .shorten-it input {
+          margin-bottom: 0;
+          flex-grow: 1;
+          margin-right: 1rem;
+        }
+        .advanced-stats > h2 {
+          font-size: 3rem;
+        }
+        .advanced-stats > p {
+          font-size: 1.5rem;
+          max-width: 700px;
+          margin-inline: auto;
+        }
+        .vruler {
+          display: none;
+        }
+        .cards {
+          flex-direction: row;
+          justify-content: center;
+        }
+        .card {
+          margin: 0;
+        }
+        #card1 {
+          margin-top: 0;
+        }
+        #card2 {
+          margin-top: 6rem;
+          margin-left: 3rem;
+        }
+        #card3 {
+          margin-top: 12rem;
+          margin-left: 3rem;
+        }
+        footer > img,
+        footer ul,
+        footer .icons {
+          margin-top: 0;
+          align-self: flex-start;
+        }
+        footer .list p {
+          margin-top: 0;
+        }
+        footer {
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-around;
+        }
+      }
+      /* mainstuff */
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="images/logo.svg" alt="logonav" />
+      <ul>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Resources</li>
+      </ul>
+      <div class="buttons">
+        <button id="btn1"><p>Login</p></button
+        ><button id="btn2"><p>Sign Up</p></button>
+      </div>
+      <img src="images/ham.svg" alt="" id="ham" />
+    </nav>
+    <div class="menu menutoggle">
+      <ul>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Resources</li>
+      </ul>
+      <hr />
+      <button id="menubtn1"><p>Login</p></button
+      ><button id="menubtn2">Sign Up</button>
+    </div>
+    <div class="working">
+      <div class="sideImg">
+        <img src="images/illustration-working.svg" alt="" />
+      </div>
+      <div class="text">
+        <h1>More than just shorter links</h1>
+        <p>
+          Build your brand's recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <button id="get-started"><p>Get Started</p></button>
+      </div>
+    </div>
+
+    <div class="advanced-stats">
+      <div class="shorten-it">
+        <input type="text" placeholder="Shorten a link here..." />
+        <button><p>Shorten It!</p></button>
+      </div>
+      <h2>Advanced Statistics</h2>
+      <p>
+        Track how your links are performing across the web with our advanced
+        statistics dashborad.
+      </p>
+      <div class="cards">
+        <div class="vruler"></div>
+        <div class="card" id="card1">
+          <img src="images/icon-brand-recognition.svg" alt="" />
+          <h3>Brand Recognition</h3>
+          <p>
+            Boost your brand recognition with each click. Generic links don't
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </div>
+        <div class="card" id="card2">
+          <img src="images/icon-detailed-records.svg" alt="" />
+          <h3>Detailed Records</h3>
+          <p>
+            Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions.
+          </p>
+        </div>
+        <div class="card" id="card3">
+          <img src="images/icon-fully-customizable.svg" alt="" />
+          <h3>Fully Customizable</h3>
+          <p>
+            Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="boost">
+      <h2>Boost your links today</h2>
+      <button id="get-started"><p>Get Started</p></button>
+    </div>
+
+    <footer>
+      <img src="images/ftrlogo.svg" alt="footerlogo" />
+      <div class="list">
+        <p>Features</p>
+        <ul>
+          <li>Life Shortening</li>
+          <li>Branded Links</li>
+          <li>Analytics</li>
+        </ul>
+      </div>
+      <div class="list">
+        <p>Resources</p>
+        <ul>
+          <li>Blog</li>
+          <li>Developers</li>
+          <li>Support</li>
+        </ul>
+      </div>
+      <div class="list">
+        <p>Company</p>
+        <ul>
+          <li>About</li>
+          <li>Our Team</li>
+          <li>Carrers</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="icons">
+        <img src="images/icon-facebook.svg" alt="" /><img
+          src="images/icon-twitter.svg"
+          alt=""
+        /><img src="images/icon-pinterest.svg" alt="" /><img
+          src="images/icon-instagram.svg"
+          alt=""
+        />
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </body>
+</html>

@@ -218,7 +218,60 @@
         <p>© Easybank. All Rights Reserved</p>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+      var tl=gsap.timeline();
+      tl
+      .from(".navbar",{
+        delay:0.2,
+        opacity:2,
+        y:"-100",
+        duration:1
+      })
+      .from(".navbar button",{
+        y:"-100",
+        ease:"bounce",
+        duration:1
+      })
+      .from(".cont1 .text",{
+        x:"-100%",
+        opacity:0,
+        duration:0.5
+      })
+      .from(".cont1 .sideimg",{
+        y:"-100%",
+        opacity:0,
+        duration:0.5
+      })
+      if(window.innerHeight>=1070){
+      tl.from(".cont1 img",{
+        y:"100%",
+        duration:1.4,
+        delay:"-1",
+        opacity:0,
+      })}
+      else{
+        tl.from(".cont1 img",{
+        x:"100%",
+        duration:1.4,
+        delay:"-1",
+        opacity:0,
+      })
+      }
+
+      gsap.from(".cont2 .card", {
+        scrollTrigger:{
+          trigger:".cont2",
+          start:"top center",
+          end:"bottom center",
+          scrub:1
+        },
+        opacity:0,
+        duration:1,
+        y:"-100%"
+      })
+
       let body = document.body;
       let svg = document.getElementsByTagName("svg");
       svg[0].addEventListener("mouseover", colchange);
